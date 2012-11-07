@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+source "http://gemcutter.org"
+
+gem 'logger'
+gem 'sinatra'
+gem 'haml'
+gem 'sass'
+gem 'activerecord', :require => 'active_record'

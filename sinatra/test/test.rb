@@ -3,7 +3,16 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'active_record'
-load 'config/settings.rb'
+
+configure do
+  ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => 'test.sqlite3.db')
+  set :server, %w{mongrel webrick}
+end
+
+#ActiveRecord::Base.establish_connection(
+#  :adapter => 'sqlite3',
+#  :dbfile =>  'db/test.sqlite3.db'
+#)
 
 #Models
 class Post < ActiveRecord::Base

@@ -1,7 +1,7 @@
 namespace :db do
   task :environment do
     require 'active_record'
-    ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :dbfile =>  'db/test.sqlite3.db'
+    ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :dbfile =>  'test.sqlite3.db'
   end
 
   desc "Migrate the database"
